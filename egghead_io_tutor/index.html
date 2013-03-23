@@ -10,6 +10,21 @@
 		<h1>{{data.message}}</h1>
 		<h2>{{data.message|reverse}}</h2>
 	</div>
+	<div ng-controller="AvengersCtrl">
+		<label for="search-all">All: </label>
+		<input id="search-all" type="text" ng-model="search.$"/>
+		<label for="search-name">Name: </label>
+		<input id="search-name" type="text" ng-model="search.Name"/>
+		<label for="search-character">Character: </label>
+		<input id="search-character" type="text" ng-model="search.Character"/>
+
+		<table>
+			<tr ng-repeat="actor in avengers.cast | filter:search">
+				<td>{{actor.Name}}</td>
+				<td>{{actor.Character}}</td>
+			</tr>
+		</table>
+	</div>
 </div>
 
 
