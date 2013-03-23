@@ -1,12 +1,5 @@
 var myApp = angular.module('myApp', [])
 
-myApp.directive("superman", function(){
-	return {
-		restrict: "E",
-		template: "<div>Here I am to save the day</div>"
-	}
-})
-
 myApp.factory('Data', function(){
 	return {message: "I'm data from a service"};
 })
@@ -23,6 +16,42 @@ myApp.filter('reverse', function(){
 		return text.split("").reverse().join("");
 	}
 })
+
+myApp.directive("superman", function(){
+	return {
+		restrict: "E",
+		template: "<div>Here I am to save the day</div>"
+	}
+})
+
+myApp.directive("super", function(){
+	return {
+		restrict: "A",
+		link: function(){
+			console.log('I am working on an attribute');
+		}
+	}
+})
+
+myApp.directive("super", function(){
+	return {
+		restrict: "C",
+		link: function(){
+			console.log('I am working on a class');
+		}
+	}
+})
+
+myApp.directive("super", function(){
+	return {
+		restrict: "M",
+		link: function(){
+			console.log('I am working on a comment');
+		}
+	}
+})
+
+
 
 
 function FirstCtrl($scope, Data){
