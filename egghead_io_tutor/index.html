@@ -5,13 +5,13 @@
 </head>
 <body>
 <div ng-app="myApp">
-	<strong>FirstCtrl</strong>
+	<h2>FirstCtrl</h2>
 	<div ng-controller="FirstCtrl">
 		<input type="text" ng-model="data.message">
 		<h1>{{data.message}}</h1>
 		<h2>{{data.message|reverse}}</h2>
 	</div>
-	<strong>AvengersCtrl</strong>	
+	<h2>AvengersCtrl</h2>	
 	<div ng-controller="AvengersCtrl">
 		<label for="search-all">All: </label>
 		<input id="search-all" type="text" ng-model="search.$"/>
@@ -21,18 +21,20 @@
 		<input id="search-character" type="text" ng-model="search.Character"/>
 
 		<table>
-			<tr ng-repeat="actor in avengers.cast | filter:search |orderBy:'-Name' | limitTo:-5">
+			<tr ng-repeat="actor in avengers.cast | filter:search | orderBy:'-Name' | limitTo:-5">
 				<td>{{actor.Name | lowercase}}</td>
 				<td>{{actor.Character | uppercase}}</td>
 			</tr>
 		</table>
 	</div>
-	<strong>Directive</strong>	
+	<h2>Directive</h2>	
 	<superman></superman>
 	<div super></div>
 	<div class="super"></div>
-	<!-- directive:super -->
-	<div></div>
+	<!-- directive:supers -->
+
+	<h2>Behaviours</h2>
+	<div enter leave>Ho-ho-ho</div>
 
 </div>
 

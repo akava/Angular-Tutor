@@ -51,6 +51,24 @@ myApp.directive("super", function(){
 	}
 })
 
+myApp.directive("enter", function(){
+    // return function mean, restrict to "A"
+    // and link to this function
+    return function(scope, element){
+        element.bind("mouseenter", function(){
+            console.log("I'm inside of you!");
+        });
+    }
+})
+
+myApp.directive("leave", function(){
+    return function(scope, element){
+        element.bind("mouseleave", function(){
+            console.log("I miss you!");
+        });
+    }
+})
+
 
 
 
