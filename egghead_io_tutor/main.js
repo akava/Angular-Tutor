@@ -56,7 +56,7 @@ myApp.directive("enter", function(){
     // and link to this function
     return function(scope, element){
         element.bind("mouseenter", function(){
-            console.log("I'm inside of you!");
+            element.addClass("highlight");
         });
     }
 })
@@ -64,7 +64,25 @@ myApp.directive("enter", function(){
 myApp.directive("leave", function(){
     return function(scope, element){
         element.bind("mouseleave", function(){
-            console.log("I miss you!");
+            element.removeClass("highlight");
+        });
+    }
+})
+
+myApp.directive("enter2", function(){
+    // return function mean, restrict to "A"
+    // and link to this function
+    return function(scope, element,attrs){
+        element.bind("mouseenter", function(){
+            element.addClass(attrs.enter2);
+        });
+    }
+})
+
+myApp.directive("leave2", function(){
+    return function(scope, element, attrs){
+        element.bind("mouseleave", function(){
+            element.removeClass(attrs.enter2);
         });
     }
 })
