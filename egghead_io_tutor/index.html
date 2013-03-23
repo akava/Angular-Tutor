@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Angular Test</title>
+</head>
+<body>
+<div ng-app="myApp">
+	<div ng-controller="FirstCtrl">
+		<input type="text" ng-model="data.message">
+		<h1>{{data.message}}</h1>
+		<h2>{{data.message|reverse}}</h2>
+	</div>
+</div>
+
+
+
+
+
+<script type="text/javascript" src="../components/angular.min.js"></script>
+<script type="text/javascript" src="main.js"></script>
+</body>
+</html>
