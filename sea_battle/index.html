@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sea Battle AngularJS</title>
+	<link rel="stylesheet" type="text/css" href="main.css">
+</head>
+<body>
+<div ng-app="seaBattleApp">
+	<div ng-controller="FieldCtrl">
+		<table class="field">
+			<tr ng-repeat="row in field.rows">
+				<td ng-repeat="cell in row" class="cell {{cell.state}}"
+					ng-click="toogleCell(cell)">
+				</td>
+			</tr>
+		</table>
+	</div>
+</div>
+
+<script type="text/javascript" src="../components/angular.min.js"></script>
+<script type="text/javascript" src="main.js"></script>
+</body>
+</html>
