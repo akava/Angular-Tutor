@@ -1,5 +1,12 @@
 var myApp = angular.module('myApp', [])
 
+myApp.directive("superman", function(){
+	return {
+		restrict: "E",
+		template: "<div>Here I am to save the day</div>"
+	}
+})
+
 myApp.factory('Data', function(){
 	return {message: "I'm data from a service"};
 })

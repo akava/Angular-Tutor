@@ -5,11 +5,13 @@
 </head>
 <body>
 <div ng-app="myApp">
+	<strong>FirstCtrl</strong>
 	<div ng-controller="FirstCtrl">
 		<input type="text" ng-model="data.message">
 		<h1>{{data.message}}</h1>
 		<h2>{{data.message|reverse}}</h2>
 	</div>
+	<strong>AvengersCtrl</strong>	
 	<div ng-controller="AvengersCtrl">
 		<label for="search-all">All: </label>
 		<input id="search-all" type="text" ng-model="search.$"/>
@@ -25,6 +27,9 @@
 			</tr>
 		</table>
 	</div>
+	<strong>Directive</strong>	
+	<superman></superman>
+
 </div>
 
 
